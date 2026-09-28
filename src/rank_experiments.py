@@ -1,7 +1,7 @@
 """Independent grouped LambdaRank comparison on our fixed query holdout.
 
-This code operates only on our generated features/labels. It neither imports
-nor executes reference-repository code. LambdaRank is a standard objective:
+This code compares models using the generated candidate features and labels.
+LambdaRank is a standard grouped ranking objective:
 https://lightgbm.readthedocs.io/en/stable/Parameters.html#objective
 Query-level score ranks/gaps are generic retrieval metadata. Numeric query/item
 indices are used for grouping and joins and are never prediction features.

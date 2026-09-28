@@ -380,7 +380,7 @@ def train(args):
     )
     report = {
         "architecture": "Shared-weight BERT bi-encoder, normalized CLS pooling",
-        "implementation": "Original local PyTorch loop; no reference solution code/weights",
+        "implementation": "Local PyTorch contrastive training loop",
         "base_provenance": provenance,
         "seed": SEED,
         "device": device,

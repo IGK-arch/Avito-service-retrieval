@@ -18,7 +18,8 @@
 
 Требуется **Python 3.12**, CPU и примерно 4 GB свободной RAM. GPU не нужен.
 Используются собственные модели из `checkpoints/` и замороженные признаки
-из [релиза submission-v1](https://github.com/IGK-arch/Avito-service-retrieval/releases/tag/submission-v1).
+из локального архива `reproduction-cache-v1.zip`, передаваемого проверяющему
+отдельно от публичного репозитория.
 В архиве признаков нет готовых ответов: скрипт заново применяет модели,
 объединяет оценки и выбирает топ-50.
 
@@ -39,7 +40,7 @@ python src/extract_data.py --archive NLP_avito_interns.zip
 
 Если данные уже извлечены, положите benchmark Parquet в `data/`.
 Для применения моделей `train.parquet` не требуется.
-Скачайте `reproduction-cache-v1.zip` из релиза в корень и выполните:
+Положите предоставленный отдельно `reproduction-cache-v1.zip` в корень:
 
 ```bash
 python src/package_reproduction.py extract --archive reproduction-cache-v1.zip
@@ -126,7 +127,7 @@ answer.csv                    Отправленный результат
 Роли модулей: [docs/code_map.md](docs/code_map.md).
 Tiny, remote-признаки, резервирование исторических кликов и refit на всех
 отложенных запросах не применялись в отправленном ансамбле.
-Исходные данные, кэши и сторонние reference-копии не входят в Git history.
+Исходные данные и тяжёлые кэши не входят в Git history.
 
 ## Проверки кода
 
@@ -140,14 +141,9 @@ python -m pytest
 Основная интеграционная проверка — повторная генерация в чистой копии
 репозитория с совпадением SHA-256 и проверкой всех требований CSV.
 
-## Готовые компоненты и источники
+## Используемые open-source компоненты
 
 Использованы open-source NumPy, pandas, PyArrow, CatBoost, LightGBM, SciPy,
 scikit-learn, NLTK, PyTorch, Transformers и Sentence Transformers.
 Версии, модель MiniLM и лицензии: [THIRD_PARTY.md](THIRD_PARTY.md).
 
-По просьбе автора изучены общие подходы из
-[boomchik93](https://github.com/boomchik93/AvitoDS_Bootcamp_TestTask) и
-[alyaalyo](https://github.com/alyaalyo/avito_nlp_item_for_queries).
-Их код, готовые ответы и обученные на задаче веса не используются.
-Границы использования идей: [docs/references.md](docs/references.md).
