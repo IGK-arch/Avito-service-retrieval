@@ -146,4 +146,3 @@ python -m pytest
 Использованы open-source NumPy, pandas, PyArrow, CatBoost, LightGBM, SciPy,
 scikit-learn, NLTK, PyTorch, Transformers и Sentence Transformers.
 Версии, модель MiniLM и лицензии: [THIRD_PARTY.md](THIRD_PARTY.md).
-

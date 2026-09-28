@@ -2,7 +2,7 @@
 
 The archive is a computed feature cache, not a table of ready-made answers.
 The exporter still runs both trained models and selects their top 50 results.
-Large caches are published as a GitHub Release asset, outside Git history.
+Large caches are supplied as local archives, separately from Git history.
 """
 
 import argparse
