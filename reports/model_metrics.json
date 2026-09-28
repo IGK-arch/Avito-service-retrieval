@@ -1,0 +1,14 @@
+{
+  "catboost_depth6": {
+    "validation_recall50": 0.8971666666666667,
+    "cold_recall50": 0.8938829787234043,
+    "warm_recall50": 0.9026785714285714,
+    "train_recall50": 0.9140888888888888
+  },
+  "catboost_depth8": {
+    "validation_recall50": 0.8918333333333334,
+    "cold_recall50": 0.8843085106382979,
+    "warm_recall50": 0.9044642857142857,
+    "train_recall50": 0.9316444444444444
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "verified_at_utc": "2026-09-28T19:07:49.014011+00:00",
+  "python": "3.12.6",
+  "os": "Windows",
+  "setup": "Fresh clone of target repository, prepared source files, reproduction cache extracted from its ZIP; original benchmark input Parquets supplied separately",
+  "prediction_command": "python src/submit_best.py --data-dir <task-data> --output answer_reproduced.csv",
+  "ready_answer_read_by_exporter": false,
+  "submitted_sha256": "328a58d7b36c67930747079c8b0c04b0db26f27626b53a53abb331085311c1c1",
+  "reproduced_sha256": "328a58d7b36c67930747079c8b0c04b0db26f27626b53a53abb331085311c1c1",
+  "identical_bytes": true,
+  "unit_tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "ruff": "passed",
+  "black": {
+    "unchanged_python_files": 23,
+    "passed": true
+  },
+  "csv_validation": {
+    "passed": true,
+    "queries": 2452,
+    "candidates_per_query": 50,
+    "errors": 0
+  },
+  "public_recall50": 0.866246,
+  "local_recall50": 0.9136666666666666
+}

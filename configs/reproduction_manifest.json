@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "purpose": "Frozen candidate features for exact offline model inference",
+  "contains_ready_answers": false,
+  "expected_answer_sha256": "328a58d7b36c67930747079c8b0c04b0db26f27626b53a53abb331085311c1c1",
+  "base_feature_count": 41,
+  "files": {
+    "benchmark_features.npz": {
+      "sha256": "65dbab4672d38eb8c6e7504ae8ea11fba2d284fd5039dbba261a52fae024f9bd",
+      "bytes": 418817406
+    },
+    "eval_item_ids.parquet": {
+      "sha256": "617038278880126b3859fd2511ba6212e3ddab9af8da5ed7f41dd6500bb09c9c",
+      "bytes": 3431409
+    },
+    "benchmark_category_query_ids.npy": {
+      "sha256": "8bd274a1a5a1ed7510038263fb15673b9eaf8c58ed9daefefaa5f27835261c0e",
+      "bytes": 157056
+    },
+    "item_embeddings.json": {
+      "sha256": "6f5a8514a22beaf3e602d3bc0cc7e579f112b55cf1827eaceee089a800a544b0",
+      "bytes": 888
+    }
+  }
+}

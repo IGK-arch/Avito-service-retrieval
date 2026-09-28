@@ -1,0 +1,23 @@
+{
+  "validation_recall50": 0.8956666666666667,
+  "cold_recall50": 0.8893617021276595,
+  "warm_recall50": 0.90625,
+  "train_recall50": 0.9386074074074072,
+  "runtime_seconds": 218.2652108669281,
+  "parameters": {
+    "iterations": 1200,
+    "depth": 9,
+    "learning_rate": 0.035,
+    "loss_function": "Logloss",
+    "l2_leaf_reg": 15,
+    "random_strength": 0.5,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.85,
+    "rsm": 0.9,
+    "border_count": 128,
+    "random_seed": 20260928,
+    "thread_count": 6,
+    "verbose": 150,
+    "allow_writing_files": false
+  }
+}

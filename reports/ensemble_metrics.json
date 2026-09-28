@@ -1,0 +1,137 @@
+{
+  "validation_queries": 1500,
+  "cold_validation_queries": 940,
+  "candidate_pairs": 5930991,
+  "initial_free_memory_gb": 12.468048095703125,
+  "final_free_memory_gb": 12.037887573242188,
+  "candidate_recall_ceiling": 0.9601666666666666,
+  "results": {
+    "catboost_depth6": {
+      "validation_recall50": 0.8971666666666667,
+      "cold_recall50": 0.8938829787234043,
+      "warm_recall50": 0.9026785714285714,
+      "ranker_train_recall50": 0.9140888888888888
+    },
+    "catboost_depth8": {
+      "validation_recall50": 0.8918333333333334,
+      "cold_recall50": 0.8843085106382979,
+      "warm_recall50": 0.9044642857142857,
+      "ranker_train_recall50": 0.9316444444444444,
+      "delta_vs_cb6": -0.005333333333333333,
+      "queries_improved": 15,
+      "queries_worsened": 24,
+      "paired_delta_standard_error": 0.0040815204981421915
+    },
+    "probability_cb6_0.25": {
+      "validation_recall50": 0.8931666666666667,
+      "cold_recall50": 0.886436170212766,
+      "warm_recall50": 0.9044642857142857,
+      "ranker_train_recall50": 0.9307555555555554,
+      "delta_vs_cb6": -0.004,
+      "queries_improved": 12,
+      "queries_worsened": 19,
+      "paired_delta_standard_error": 0.0036206606994273888
+    },
+    "probability_cb6_0.50": {
+      "validation_recall50": 0.8971666666666667,
+      "cold_recall50": 0.8896276595744681,
+      "warm_recall50": 0.9098214285714286,
+      "ranker_train_recall50": 0.9261999999999999,
+      "delta_vs_cb6": 0.0,
+      "queries_improved": 8,
+      "queries_worsened": 9,
+      "paired_delta_standard_error": 0.002625544618789098
+    },
+    "probability_cb6_0.75": {
+      "validation_recall50": 0.9001666666666667,
+      "cold_recall50": 0.8944148936170213,
+      "warm_recall50": 0.9098214285714286,
+      "ranker_train_recall50": 0.9218666666666666,
+      "delta_vs_cb6": 0.003,
+      "queries_improved": 6,
+      "queries_worsened": 2,
+      "paired_delta_standard_error": 0.001793980992306234
+    },
+    "logit_average_50_50": {
+      "validation_recall50": 0.8958333333333334,
+      "cold_recall50": 0.8896276595744681,
+      "warm_recall50": 0.90625,
+      "ranker_train_recall50": 0.9243111111111111,
+      "delta_vs_cb6": -0.0013333333333333333,
+      "queries_improved": 8,
+      "queries_worsened": 11,
+      "paired_delta_standard_error": 0.002789584278386909
+    },
+    "rrf_constant_20": {
+      "validation_recall50": 0.8991666666666667,
+      "cold_recall50": 0.8917553191489361,
+      "warm_recall50": 0.9116071428571428,
+      "ranker_train_recall50": 0.9276444444444444,
+      "delta_vs_cb6": 0.002,
+      "queries_improved": 9,
+      "queries_worsened": 7,
+      "paired_delta_standard_error": 0.0025389122003760963
+    },
+    "rrf_constant_60": {
+      "validation_recall50": 0.8991666666666667,
+      "cold_recall50": 0.8917553191489361,
+      "warm_recall50": 0.9116071428571428,
+      "ranker_train_recall50": 0.9253111111111111,
+      "delta_vs_cb6": 0.002,
+      "queries_improved": 9,
+      "queries_worsened": 7,
+      "paired_delta_standard_error": 0.0025389122003760963
+    }
+  },
+  "recipes": {
+    "probability_cb6_0.25": {
+      "kind": "probability_average",
+      "components": {
+        "catboost_depth6": 0.25,
+        "catboost_depth8": 0.75
+      }
+    },
+    "probability_cb6_0.50": {
+      "kind": "probability_average",
+      "components": {
+        "catboost_depth6": 0.5,
+        "catboost_depth8": 0.5
+      }
+    },
+    "probability_cb6_0.75": {
+      "kind": "probability_average",
+      "components": {
+        "catboost_depth6": 0.75,
+        "catboost_depth8": 0.25
+      }
+    },
+    "logit_average_50_50": {
+      "kind": "logit_average",
+      "components": {
+        "catboost_depth6": 0.5,
+        "catboost_depth8": 0.5
+      },
+      "clip": 1e-07
+    },
+    "rrf_constant_20": {
+      "kind": "reciprocal_rank_fusion",
+      "components": {
+        "catboost_depth6": 0.5,
+        "catboost_depth8": 0.5
+      },
+      "constant": 20
+    },
+    "rrf_constant_60": {
+      "kind": "reciprocal_rank_fusion",
+      "components": {
+        "catboost_depth6": 0.5,
+        "catboost_depth8": 0.5
+      },
+      "constant": 60
+    }
+  },
+  "improving_ensemble": "probability_cb6_0.75",
+  "ordered_query_keys_sha256": "bcbde39cb9d6179d0ed4b5137382435878f15627f07d93fb66d018895cc18f3d",
+  "ordered_item_ids_sha256": "02585d28f0d41a1435df5820dbf4e7061776d94c4cc3ffa4d2f4b8daa48c40b5",
+  "note": "Selected model unchanged. Validation differences share the same candidate union; this is a hyperparameter experiment, not an independent test."
+}

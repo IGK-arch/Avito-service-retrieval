@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+# Preserve submitted CSV bytes and frozen checkpoint hashes on every OS.
+answer.csv -text -diff
+checkpoints/** -text -diff
+*.cbm -text

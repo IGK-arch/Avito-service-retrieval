@@ -1,0 +1,30 @@
+{
+  "ensemble": {
+    "name": "query_zscore_lgbm_0.90",
+    "recipe": {
+      "kind": "query_zscore",
+      "lightgbm_weight": 0.9,
+      "lightgbm_model": "lgbm_depth9",
+      "catboost_model": "catboost_depth6"
+    },
+    "metrics": {
+      "validation_recall50": 0.9136666666666666,
+      "cold_recall50": 0.9095744680851063,
+      "warm_recall50": 0.9205357142857142,
+      "ranker_train_recall50": 0.9611259259259257,
+      "delta_vs_lgbm": 0.005,
+      "paired_delta_standard_error": 0.0019111344684866523,
+      "queries_improved": 8,
+      "queries_worsened": 1
+    }
+  },
+  "model_sha256": {
+    "catboost": "9e2d778f716603e8864234b58cecbe6dfc721d391da517bb3363e0bc75ab3919",
+    "lightgbm": "43ff58313d0da816504bb2fabf01f3f1ea60a00b84e563163cdb216dc1af3092"
+  },
+  "answer_sha256": "328a58d7b36c67930747079c8b0c04b0db26f27626b53a53abb331085311c1c1",
+  "public_recall50": 0.866246,
+  "refit": false,
+  "additional_history_reservation": false,
+  "note": "Uses the exact saved models whose mixture was evaluated; reported recall is local validation, not platform score."
+}

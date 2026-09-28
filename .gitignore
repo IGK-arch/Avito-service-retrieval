@@ -1,0 +1,38 @@
+# Original datasets, third-party reference checkouts and derived caches.
+data/
+references/
+artifacts/
+models/
+dist/
+publication/
+*.parquet
+*.npy
+*.npz
+*.joblib
+*.zip
+*.tmp
+
+# Python environments and local tools.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+
+# Runtime logs are generated locally; compact results are tracked separately.
+reports/run.log
+reports/lgbm_run.log
+reports/tiny_training.jsonl
+reports/lgbm_progress.json
+answer_best_*.csv
+answer_reproduced.csv
+
+# A local clean-room verification checkout.
+reproduction_check/

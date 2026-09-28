@@ -1,0 +1,30 @@
+{
+  "valid": true,
+  "expected_query_count": 2452,
+  "actual_row_count": 2452,
+  "unique_query_count": 2452,
+  "corpus_item_count": 189212,
+  "columns": [
+    "query_id",
+    "answer"
+  ],
+  "candidate_count": {
+    "minimum": 50,
+    "maximum": 50,
+    "mean": 50.0,
+    "empty_answers": 0
+  },
+  "error_counts": {},
+  "missing_query_ids_sample": [],
+  "extra_query_ids_sample": [],
+  "error_examples": [],
+  "all_errors_count": 0,
+  "answer_path": "publication\\answer_reproduced.csv",
+  "answer_bytes": 2128353,
+  "sha256": "328a58d7b36c67930747079c8b0c04b0db26f27626b53a53abb331085311c1c1",
+  "utf8_bom": false,
+  "benchmark_queries_path": "data\\benchmark_queries.parquet",
+  "benchmark_items_path": "data\\benchmark_items.parquet",
+  "checked_at_utc": "2026-09-28T19:05:55.494136+00:00",
+  "matches_submitted_answer": true
+}

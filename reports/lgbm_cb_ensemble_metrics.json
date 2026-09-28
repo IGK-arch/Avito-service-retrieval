@@ -1,0 +1,89 @@
+{
+  "base_models": {
+    "lightgbm": "lgbm_depth9",
+    "catboost": "catboost_depth6"
+  },
+  "results": {
+    "lgbm_depth9": {
+      "validation_recall50": 0.9086666666666666,
+      "cold_recall50": 0.902127659574468,
+      "warm_recall50": 0.9196428571428571,
+      "ranker_train_recall50": 0.9611259259259257
+    },
+    "catboost_depth6": {
+      "validation_recall50": 0.8971666666666667,
+      "cold_recall50": 0.8938829787234043,
+      "warm_recall50": 0.9026785714285714,
+      "ranker_train_recall50": 0.9140888888888888
+    },
+    "query_zscore_lgbm_0.50": {
+      "validation_recall50": 0.9098333333333334,
+      "cold_recall50": 0.9045212765957447,
+      "warm_recall50": 0.91875,
+      "ranker_train_recall50": 0.9590518518518517,
+      "delta_vs_lgbm": 0.0011666666666666668,
+      "paired_delta_standard_error": 0.0034044313320125657,
+      "queries_improved": 15,
+      "queries_worsened": 15
+    },
+    "query_zscore_lgbm_0.75": {
+      "validation_recall50": 0.9126666666666666,
+      "cold_recall50": 0.9069148936170213,
+      "warm_recall50": 0.9223214285714286,
+      "ranker_train_recall50": 0.9611259259259257,
+      "delta_vs_lgbm": 0.004,
+      "paired_delta_standard_error": 0.0027069450864644616,
+      "queries_improved": 12,
+      "queries_worsened": 6
+    },
+    "query_zscore_lgbm_0.90": {
+      "validation_recall50": 0.9136666666666666,
+      "cold_recall50": 0.9095744680851063,
+      "warm_recall50": 0.9205357142857142,
+      "ranker_train_recall50": 0.9611259259259257,
+      "delta_vs_lgbm": 0.005,
+      "paired_delta_standard_error": 0.0019111344684866523,
+      "queries_improved": 8,
+      "queries_worsened": 1
+    },
+    "rrf_lgbm_0.75": {
+      "validation_recall50": 0.911,
+      "cold_recall50": 0.9053191489361702,
+      "warm_recall50": 0.9205357142857142,
+      "ranker_train_recall50": 0.9611259259259257,
+      "delta_vs_lgbm": 0.0023333333333333335,
+      "paired_delta_standard_error": 0.002134235827559289,
+      "queries_improved": 7,
+      "queries_worsened": 4
+    }
+  },
+  "recipes": {
+    "query_zscore_lgbm_0.50": {
+      "kind": "query_zscore",
+      "lightgbm_weight": 0.5,
+      "lightgbm_model": "lgbm_depth9",
+      "catboost_model": "catboost_depth6"
+    },
+    "query_zscore_lgbm_0.75": {
+      "kind": "query_zscore",
+      "lightgbm_weight": 0.75,
+      "lightgbm_model": "lgbm_depth9",
+      "catboost_model": "catboost_depth6"
+    },
+    "query_zscore_lgbm_0.90": {
+      "kind": "query_zscore",
+      "lightgbm_weight": 0.9,
+      "lightgbm_model": "lgbm_depth9",
+      "catboost_model": "catboost_depth6"
+    },
+    "rrf_lgbm_0.75": {
+      "kind": "reciprocal_rank",
+      "lightgbm_weight": 0.75,
+      "constant": 60.0,
+      "lightgbm_model": "lgbm_depth9",
+      "catboost_model": "catboost_depth6"
+    }
+  },
+  "note": "Exploratory mixtures on the same validation; standalone selected model unchanged.",
+  "improving_ensemble": "query_zscore_lgbm_0.90"
+}
