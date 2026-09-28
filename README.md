@@ -1,3 +1,5 @@
+![Avito cat](avito_cat.gif)
+
 # Avito Service Retrieval
 
 Кандидатогенерация объявлений услуг: для каждого запроса решение возвращает
